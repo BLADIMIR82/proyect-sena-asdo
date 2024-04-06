@@ -6,6 +6,7 @@ import Order from "../model/Order.js";
 import Product from "../model/Product.js";
 import User from "../model/User.js";
 import Coupon from "../model/Coupon.js";
+
 //@desc create orders
 //@route POST /api/v1/orders
 //@access private
@@ -200,5 +201,16 @@ export const getOrderStatsCtrl = asyncHandler(async (req, res) => {
     message: "Sum of orders",
     orders,
     saleToday,
+  });
+});
+
+// @desc    delete order
+// @route   DELETE /api/orders/:id
+// @access  Private/Admin
+export const deleteOrderCtrl = asyncHandler(async (req, res) => {
+  await Order.findByIdAndDelete(req.params.id);
+  res.json({
+    status: "success",
+    message: "Order deleted successfully",
   });
 });

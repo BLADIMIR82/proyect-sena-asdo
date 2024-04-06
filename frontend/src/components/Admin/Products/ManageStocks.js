@@ -12,7 +12,7 @@ import axios from "axios";
 export default function ManageStocks() {
   
   let productUrl = `${baseURL}/products`;
-  //delete product handler////pendiente
+  //delete product handler///
   const handleDelete = async (id) => {
     try {
       await  axios.delete(`http://localhost:2030/api/v1/products/${id}`)
