@@ -5,6 +5,7 @@ export default function AboutUs() {
     <div classNameName="bg-white">
       <div className="bg-white py-12">
         <div classNameName="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* features */}
           <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
             Trusted by the world’s most innovative teams
           </h2>
