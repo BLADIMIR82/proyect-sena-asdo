@@ -184,11 +184,11 @@ export default function Navbar() {
         <nav aria-label="Top">
           {/* Coupon navbar */}
           {!currentCoupon?.isExpired && (
-            <div className="bg-yellow-600">
+            <div className="bg-slate-400">
               <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 <p
                   style={{ textAlign: "center", width: "100%" }}
-                  className="flex-1 text-center text-sm font-medium text-white lg:flex-none"
+                  className="flex-1 text-center text-base	font-bold	 text-white lg:flex-none"
                 >
                   {currentCoupon
                     ? `${currentCoupon?.code}- ${currentCoupon?.discount}% , ${currentCoupon?.daysLeft}`
@@ -238,7 +238,7 @@ export default function Navbar() {
                     <Link to="/">
                       <span className="sr-only">Your Company</span>
                       <img
-                        className="h-20 pt-2 w-20"
+                        className="h-24 pt-2 w-24 rounded-s-sm"
                         src={logo}
                         alt="i-novotek logo"
                       />
@@ -310,6 +310,7 @@ export default function Navbar() {
                     </button>
                   </div>
                   {/* logo */}
+                  
                   <Link to="/" className="lg:hidden">
                     <img
                       className="h-32 mt-2 w-auto"

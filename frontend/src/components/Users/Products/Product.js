@@ -19,12 +19,12 @@ const policies = [
   {
     name: "International delivery",
     icon: GlobeAmericasIcon,
-    description: "Get your order in 2 years",
+    description: "Get your order in 24 hours",
   },
   {
     name: "Loyalty rewards",
     icon: CurrencyDollarIcon,
-    description: "Don't look at other tees",
+    description: "Don't look at other product",
   },
 ];
 

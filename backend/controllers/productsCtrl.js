@@ -72,7 +72,6 @@ export const getProductsCtrl = asyncHandler(async (req, res) => {
   console.log(req.query);
   //query
   let productQuery = Product.find();
-    
   //search by name of product//
   if (req.query.name) {
     productQuery = productQuery.find({

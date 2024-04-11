@@ -10,6 +10,8 @@ const Login = () => {
   const [formData, setFormData] = useState({
     email: "admin@gmail.com",
     password: "12345",
+    // email: "admin@gmail.com",
+    // password: "12345", datos del administrador
   });
   //---Destructuring---
   const { email, password } = formData;

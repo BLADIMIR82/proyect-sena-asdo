@@ -36,9 +36,8 @@ import ProductUpdate from "./components/Admin/Products/ProuductUpdate";
 import UpdateOrders from "./components/Admin/Orders/UpdateOrders";
 import ColorsList from "./components/Admin/Categories/ColorsList";
 import { useDispatch, useSelector } from "react-redux";
-import AboutUs from "./AboutUs/AboutUs";
 import Foot from "./components/HomePage/Foot";
-
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App = () => {
   return (
@@ -210,7 +209,8 @@ const App = () => {
             </AuthRoute>
           }
         ></Route>
-        <Route path="/aboutus" element={<AboutUs />} />
+        {/* AboutUs */}
+        <Route path="/aboutus" element={ <AboutUs />} />
       </Routes>
    <Foot />
     </BrowserRouter>

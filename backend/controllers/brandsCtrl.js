@@ -83,4 +83,5 @@ export const deleteBrandCtrl = asyncHandler(async (req, res) => {
     message: "brand deleted successfully",
   });
 });  
+  
        

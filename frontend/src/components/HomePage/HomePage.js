@@ -144,10 +144,12 @@ export default function Example() {
         </div>
         <section
           aria-labelledby="category-heading"
-          className="pt-24 sm:pt-16 xl:mx-auto xl:max-w-7xl xl:px-8"
-        ></section>
+          className="w-100"
+        >
+
         {/* home categories */}
         <HomeCategories />
+        </section>
 
         {/* info */}
         <section

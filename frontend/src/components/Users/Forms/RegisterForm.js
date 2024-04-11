@@ -84,7 +84,7 @@ const RegisterForm = () => {
           </div>
         </div>
         <div
-          className="hidden lg:block lg:absolute top-0 bottom-0 right-0 lg:w-3/6 bg-center bg-cover bg-no-repeat"
+          className="hidden lg:block lg:absolute top-10 bottom-10 right-0 lg:w-3/6 bg-center bg-cover bg-no-repeat"
           style={{
             backgroundImage:
               'url("https://media.istockphoto.com/id/1136179001/es/foto/zapatillas-deportivas-y-flechas-apuntando-en-diferentes-direcciones-en-tierra-de-asfalto.jpg?s=1024x1024&w=is&k=20&c=B-zeibYo1eFnekhHrNEBYsnOrCR2SNpuBVx1PUc4bR0=")',

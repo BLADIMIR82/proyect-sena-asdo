@@ -17,10 +17,10 @@ const HomeCategories = () => {
 
   return (
     <>
-      <div className="mt-4 flow-root mx-6 h-100 w-100" >
+      <div className="mt-4 mb-8 flow-root mx-4 h-100 w-100" >
         <div className="" >
-          <div className="relative box-content h-100 overflow-x-auto py-2 xl:overflow-visible">
-            <div className="min-w-screen-xl absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+          <div className="box-content w-100 h-100 overflow-x-auto py-2 xl:overflow-visible">
+            <div className="min-w-screen-xl flex flex-wrap space-x-8 px-4 sm:px-6 lg:px-8 xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
               {categoriesToShow?.map((category) => (
                 <Link
                   key={category.name}
@@ -30,7 +30,7 @@ const HomeCategories = () => {
                     <img
                       src={category.image}
                       alt=""
-                      className="h-full w-full object-cover object-center"
+                      className="h-full w-full object-cover object-center py-2"
                     />
                   </span>
                   <span
