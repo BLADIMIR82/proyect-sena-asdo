@@ -24,6 +24,10 @@ app.use(cors());
 //Stripe webhook
 //stripe instance
 const stripe = new Stripe(process.env.STRIPE_KEY);
+//Demo card
+//4242 4242 4242 4242
+//Date: any
+//CVC: any
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 const endpointSecret =
