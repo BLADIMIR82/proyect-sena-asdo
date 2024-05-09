@@ -184,7 +184,7 @@ export default function Navbar() {
         <nav aria-label="Top">
           {/* Coupon navbar */}
           {!currentCoupon?.isExpired && (
-            <div className="bg-slate-400">
+            <div className="bg-amber-500">
               <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 <p
                   style={{ textAlign: "center", width: "100%" }}

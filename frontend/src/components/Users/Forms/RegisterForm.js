@@ -41,7 +41,7 @@ const RegisterForm = () => {
             <div className="w-full lg:w-2/6 px-4 mb-12 lg:mb-0">
               <div className="py-20 text-center">
                 <h3 className="mb-8 text-4xl md:text-5xl font-bold font-heading">
-                  Signing up with social is super quick
+                  Welcome Register!
                 </h3>
                 {/* errr */}
                 {error && <ErrorMsg message={error?.message} />}

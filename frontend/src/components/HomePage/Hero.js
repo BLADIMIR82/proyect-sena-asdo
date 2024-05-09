@@ -5,14 +5,11 @@ export default function Hero() {
     
 
 <div className="relative">
-            <div
-              className="h-full  bg-gray-100 lg:block"
-            />
+        
             <div className="h-86 w-full"  id='hero'>
               <img
-                src="https://media.istockphoto.com/id/1154789529/es/foto/cierre-de-la-pierna-de-la-mujer-en-el-comienzo-de-la-carrera-para-alcanzar-la-meta.jpg?s=1024x1024&w=is&k=20&c=WedKQE2RM89Rusx8BFfbwhYkZi87erJ3v_4fMcHKugc="
-                alt="banner"
-                className="h-100 w-full object-cover object-center p-10"
+                src="https://images.unsplash.com/photo-1527900887130-4c59133ff4a7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                className="h-80 w-full object-cover object-center p-10"
               />
             </div>
           </div>

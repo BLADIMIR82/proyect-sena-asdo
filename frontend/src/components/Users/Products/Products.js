@@ -21,7 +21,10 @@ const Products = ({ products }) => {
                 <span className="absolute top-0 left-0 ml-6 mt-6 px-2 py-1 text-xs font-bold font-heading bg-white border-2 border-red-500 rounded-full text-red-500">
                   -15%
                 </span>
+
                 <Link
+
+
                   className="block"
                   to={{
                     pathname: `/products/${product?.id}`,
@@ -30,6 +33,9 @@ const Products = ({ products }) => {
                     },
                   }}
                 >
+                  <svg class="h-10 w-10 text-gray-500 absolute top-0 right-0 mt-4 px-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
                   <img
                     className="w-full h-64 object-cover"
                     src={product?.images[0]}
@@ -44,46 +50,24 @@ const Products = ({ products }) => {
                     <h3 className="mb-2 text-xl font-bold font-heading">
                       {product?.brand}
                     </h3>
-                                  <div className="flex items-start  flex-row flex-wrap">
-                                  {product?.colors.map((color)=>( 
+                    <div className="flex items-start  flex-row flex-wrap">
+                      {product?.colors.map((color) => (
 
-                                        <span
-                                          style={{
-                                            backgroundColor: color
-                                          }}
-                                          aria-hidden="true"
-                                          className="h-6 w-6 border border-black border-opacity-10 rounded-full m-1"
-                                        />
-                                  ))} 
-                                        
-                                  </div>
-                               
+                        <span
+                          style={{
+                            backgroundColor: color
+                          }}
+                          aria-hidden="true"
+                          className="h-6 w-6 border border-black border-opacity-10 rounded-full m-1"
+                        />
+                      ))}
+
+                    </div>
+
                     <p className="text-lg font-bold font-heading text-blue-500">
                       <span>${product?.price}</span>
                       <span className="text-xs text-gray-500 font-semibold font-heading line-through"></span>
                     </p>
-                  </a>
-                  <a
-                    className="ml-auto mr-2 flex items-center justify-center w-12 h-12 bg-blue-300 hover:bg-blue-400 rounded-md"
-                    href="#"
-                  >
-                    <svg
-                      width={12}
-                      height={12}
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect x={5} width={2} height={12} fill="white" />
-                      <rect
-                        x={12}
-                        y={5}
-                        width={2}
-                        height={12}
-                        transform="rotate(90 12 5)"
-                        fill="white"
-                      />
-                    </svg>
                   </a>
                 </div>
               </div>
