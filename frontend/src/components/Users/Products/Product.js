@@ -318,18 +318,18 @@ export default function Product() {
         </div>
 
         {/* Reviews */}
-        <section aria-labelledby="reviews-heading" className="mt-16 sm:mt-24">
+        <section aria-labelledby="reviews-heading" className="mt-16 sm:mt-24  bg-stone-200">
           <h2
             id="reviews-heading"
-            className="text-lg font-medium text-gray-900">
-            Recent reviews
+            className="text-lg font-medium text-gray-900 mx-2">
+            Recent Reviews:
           </h2>
 
-          <div className="mt-6 space-y-10 divide-y divide-gray-200 border-t border-b border-gray-200 pb-10">
+          <div className="mt-6 space-y-10 divide-y divide-gray-200 border-t border-b border-gray-200 pb-10 ">
             {product?.reviews.map((review) => (
               <div
                 key={review._id}
-                className="pt-10 lg:grid lg:grid-cols-12 lg:gap-x-8">
+                className="pt-10 px-4 lg:grid lg:grid-cols-12 lg:gap-x-8">
                 <div className="lg:col-span-8 lg:col-start-5 xl:col-span-9 xl:col-start-4 xl:grid xl:grid-cols-3 xl:items-start xl:gap-x-8">
                   <div className="flex items-center xl:col-span-1">
                     <div className="flex items-center">
