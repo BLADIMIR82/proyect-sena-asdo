@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUserAction } from "../../../redux/slices/users/usersSlice";
 import ErrorMsg from "../../ErrorMsg/ErrorMsg";
 import LoadingComponent from "../../LoadingComp/LoadingComponent";
+import Swal from 'sweetalert2';
 
 const RegisterForm = () => {
   //dispatch
@@ -24,6 +25,10 @@ const RegisterForm = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     dispatch(registerUserAction({ fullname, email, password }));
+    Swal.fire({
+      title: "Thank you for your registration!",
+      icon: "success"
+    });
   };
   //select store data
   const { user, error, loading } = useSelector((state) => state?.users);

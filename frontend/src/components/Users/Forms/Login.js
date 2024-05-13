@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginUserAction } from "../../../redux/slices/users/usersSlice";
 import ErrorMsg from "../../ErrorMsg/ErrorMsg";
 import LoadingComponent from "../../LoadingComp/LoadingComponent";
+import Swal from 'sweetalert2';
 
 const Login = () => {
   //dispatch
@@ -24,6 +25,12 @@ const Login = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     dispatch(loginUserAction({ email, password }));
+    Swal.fire({
+      title: "Welcome!",
+      icon: "success"
+    });
+
+
   };
 
   //get data from store

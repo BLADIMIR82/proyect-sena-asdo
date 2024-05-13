@@ -19,8 +19,8 @@ const HomeProductTrending = () => {
   //get data from store
   const {
     products: { products },
-    error,
-    loading,
+    // error,
+    // loading,
   } = useSelector((state) => state?.products);
   console.log(products);
   const trendingProducts = [];
