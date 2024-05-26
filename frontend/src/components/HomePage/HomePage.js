@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import HomeCategories from "./HomeCategories";
 import HomeProductTrending from "./HomeProductTrending";
 import Hero from "./Hero";
+import { BsWhatsapp } from "react-icons/bs";
+import { Footer } from "flowbite-react";
+import Button from "../../utils/button/button";
+import ButtonCategories from "../../utils/button/buttonCategories";
+
 
 const offers = [
   {
@@ -81,28 +86,11 @@ export default function Example() {
           </nav>
 
           <Hero />
-        </div>
-        {/* <div className="relative">
-            <div
-              aria-hidden="true"
-              className="absolute hidden h-full w-1/2 bg-gray-100 lg:block"
-            />
-            <div className="h-48 w-full sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:h-full lg:w-1/2">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/home-page-02-hero-half-width.jpg"
-                alt=""
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-          </div> */}
-      </main>
-      <main>
-        {/* Category section */}
+          {/* chat api WhatsApp */}
+          {/* <Footer.Link href="https://wa.me/573167984895?text=Hello%20" target="_blank">
+            <BsWhatsapp className="h-10 w-10 'text-green-500  z-10 fixed top-110 right-10" />
+          </Footer.Link> */}
 
-        {/* Home trending trending */}
-        <HomeProductTrending />
-        <div className="relative overflow-hidden">
-          {/* Sale */}
           <section
             aria-labelledby="sale-heading"
             className="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-2 text-center sm:px-6 lg:px-8 m-2"
@@ -112,20 +100,32 @@ export default function Example() {
                 id="sale-heading"
                 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
               >
-                Get 25% off during our one-time sale
+                Get 15% off during our one-time sale
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-xl text-gray-600">
                 Most of our products are limited releases that won't come back.
                 Get your favorite items while they're in stock.
               </p>
-              <a
+              {/* <a
                 href="#"
                 className="mt-6 inline-block w-full rounded-md border border-transparent bg-gray-900 py-3 px-8 font-medium text-white hover:bg-gray-800 sm:w-auto"
               >
                 Get access to our one-time sale
-              </a>
+              </a> */}
+              <Button />
             </div>
           </section>
+
+        </div>
+      </main>
+      <main>
+        {/* Category section */}
+
+        {/* Home trending trending */}
+        <HomeProductTrending />
+        <div className="relative overflow-hidden">
+          {/* Sale */}
+
         </div>
         <div className="sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0 ">
           <h2
@@ -136,10 +136,8 @@ export default function Example() {
           </h2>
           <Link
             to="/all-categories"
-            className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
           >
-            Browse all categories
-            <span aria-hidden="true"> &rarr;</span>
+            <ButtonCategories />
           </Link>
         </div>
         <section
@@ -147,8 +145,8 @@ export default function Example() {
           className="w-100"
         >
 
-        {/* home categories */}
-        <HomeCategories />
+          {/* home categories */}
+          <HomeCategories />
         </section>
 
         {/* info */}
@@ -187,7 +185,7 @@ export default function Example() {
                 </div>
               ))}
             </div>
-           
+
           </div>
         </section>
       </main>

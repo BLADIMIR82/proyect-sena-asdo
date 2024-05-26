@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { fetchCategoriesAction } from "../../redux/slices/categories/categoriesSlice";
 
 const AllCategories = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   //dispatch
   const dispatch = useDispatch();
   useEffect(() => {
