@@ -169,18 +169,18 @@ export default function Product() {
           </div>
 
           {/* Image gallery */}
-          <div className="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
-           
-            <div className="grid grid-cols-1  lg:grid-rows-2 lg:gap-8">
-              {product?.images?.map((image) => (
+          <div className=" mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+
+            <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 lg:gap-2">
+              {product?.images?.map((image, index) => (
                 <img
                   key={image.id}
-                  src={image}
+                  src={image} 
                   alt={image.imageAlt}
                   className={classNames(
-                    image.primary
-                      ? "lg:col-span-2 lg:row-span-2"
-                      : "hidden lg:block",
+                    index === 0
+                      ? "lg:col-span-4 lg:row-span-1" 
+                      : "lg:col-span-1 lg:row-span-1 h-25 zoomable",
                     "rounded-lg"
                   )}
                 />

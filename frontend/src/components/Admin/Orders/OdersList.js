@@ -5,7 +5,6 @@ import { fetchOrdersAction } from "../../../redux/slices/orders/ordersSlices";
 import ErrorMsg from "../../ErrorMsg/ErrorMsg";
 import LoadingComponent from "../../LoadingComp/LoadingComponent";
 import NoDataFound from "../../NoDataFound/NoDataFound";
-import SuccessMsg from "../../SuccessMsg/SuccessMsg";
 import OrdersStats from "./OrdersStatistics";
 import axios from "axios";
 
@@ -17,15 +16,15 @@ export default function OrdersList() {
 
   const handleDelete = async (id) => {
     try {
-      await  axios.delete(`http://localhost:2030/api/v1/orders/${id}`)
+      await axios.delete(`http://localhost:2030/api/v1/orders/${id}`)
       dispatch(fetchOrdersAction());
-    //refresh page 
+      //refresh page 
       console.error(`exit deleting  orders: ${id}`)
-  } catch (error) {
-    console.error(`Error deleting orders: ${id}`, error);
+    } catch (error) {
+      console.error(`Error deleting orders: ${id}`, error);
+    }
   }
-  }
-  
+
   //dispatch
   const dispatch = useDispatch();
   useEffect(() => {
@@ -57,6 +56,11 @@ export default function OrdersList() {
                   scope="col"
                   className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
                   Order ID
+                </th>
+                <th
+                  scope="col"
+                  className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
+                  User
                 </th>
                 <th
                   scope="col"
@@ -100,6 +104,10 @@ export default function OrdersList() {
                     <td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">
                       {order.orderNumber}
                     </td>
+                    <td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6">
+                      {order.user?.fullname}
+                    </td>
+
                     <td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">
                       {order.paymentStatus === "Not paid" ? (
                         <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-600 text-gray-300">
@@ -135,28 +143,28 @@ export default function OrdersList() {
                           Edit
                         </Link>
                       )}
-                       {/* delete */}
-                       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                          <button
-                            onClick={() =>handleDelete(order?._id)}
-                            className="text-indigo-600 hover:text-indigo-900">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                             
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth={1.5}
-                              stroke="currentColor"
-                              className="w-6 h-6">
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                              />
-                            </svg>
-                              Delete
-                          </button>
-                        </td>
+                      {/* delete */}
+                      <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                        <button
+                          onClick={() => handleDelete(order?._id)}
+                          className="text-indigo-600 hover:text-indigo-900">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="w-6 h-6">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                            />
+                          </svg>
+                          Delete
+                        </button>
+                      </td>
                     </td>
                   </tr>
                 ))}

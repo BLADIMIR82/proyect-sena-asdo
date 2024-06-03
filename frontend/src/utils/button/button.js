@@ -6,7 +6,7 @@ export default function Button() {
 
         <a href="#">
 
-            <button className="btn"  > Get access to our one-time sale
+            <button className="btn1"  > Get access to our one-time sale
             </button>
 
         </a>

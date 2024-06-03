@@ -6,6 +6,7 @@ import {
 } from "../../../redux/slices/users/usersSlice";
 import ErrorMsg from "../../ErrorMsg/ErrorMsg";
 import LoadingComponent from "../../LoadingComp/LoadingComponent";
+import Swal from 'sweetalert2';
 import SuccessMsg from "../../SuccessMsg/SuccessMsg";
 
 const AddShippingAddress = () => {
@@ -15,6 +16,7 @@ const AddShippingAddress = () => {
   useEffect(() => {
     dispatch(getUserProfileAction());
   }, [dispatch]);
+
   const { loading, error, profile } = useSelector((state) => state?.users);
   const user = profile?.user;
   console.log(user?.hasShippingAddress);
@@ -38,6 +40,11 @@ const AddShippingAddress = () => {
     console.log(formData);
     e.preventDefault();
     dispatch(updateUserShippingAddressAction(formData));
+    Swal.fire({
+      title: "Thank you!",
+      icon: "success"
+    });
+
   };
 
   return (

@@ -19,7 +19,7 @@ const storage = new CloudinaryStorage({
     folder: "blog-api",
   },
 });
-
+   
 // Init Multer with the storage engine
 const catetgoryFileUpload = multer({ storage: storage });
 

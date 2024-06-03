@@ -1,10 +1,10 @@
 import asyncHandler from "express-async-handler";
 import Brand from "../model/Brand.js";
-
+       
 // @desc    Create new Brand
 // @route   POST /api/v1/brands
 // @access  Private/Admin
-
+   
 export const createBrandCtrl = asyncHandler(async (req, res) => {
   const { name } = req.body;
   //brand exists

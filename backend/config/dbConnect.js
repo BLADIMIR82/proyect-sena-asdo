@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+    
 const dbConnect = async () => {
   try {
     mongoose.set("strictQuery", false);

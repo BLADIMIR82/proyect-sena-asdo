@@ -1,4 +1,4 @@
-.btn {
+.btn1 {
     width: 20em;
     height: 2.3em;
     margin: 0.5em;
@@ -14,11 +14,11 @@
     overflow: hidden;
    }
    
-   button:hover {
+   .btn1:hover {
     color: black;
    }
    
-   button:after {
+   .btn1:after {
     content: "";
     background: white;
     position: absolute;
@@ -31,7 +31,7 @@
     transition: all 0.5s;
    }
    
-   button:hover:after {
+   .btn1:hover:after {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
